@@ -1,20 +1,22 @@
-# Figma Calculator (Basic + Scientific)
+# Daybook
 
-This project implements the calculator UI from your Figma screen and adds a **Scientific Mode** (sin/cos/tan) with a **Deg/Rad** toggle.
+A calm, local-first day planner prototype. Capture tasks, give them a place on your timeline, set gentle reminders, and see the shape of your week.
 
-## Prereqs
-
-- Install Node.js (LTS) so you have `node` and `npm` available.
-
-## Run
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Notes
+## What’s here
 
-- **Trig functions** use JavaScript `Math.sin/cos/tan`.
-- **Deg/Rad** conversion is handled internally (degrees are converted to radians before calling `Math.*`).
+- Daily timeline with task completion, time changes, and drag-to-reschedule on desktop
+- Quick task capture with optional time, duration, category, reminder, and recurrence settings
+- Day, week, and routines views
+- One-tap carry-forward for unfinished one-off tasks
+- Browser notifications when permission is granted and the page is open
+- Tasks saved locally in this browser with `localStorage`; no account or backend
+- Responsive layouts for mobile and desktop
 
+This repository is a React + TypeScript web prototype of the Daybook brief. A production iOS/Android app would still need the Expo / SQLite / native local-notification implementation described in the PRD. Browser notifications are best-effort and are not guaranteed when the browser is closed.
